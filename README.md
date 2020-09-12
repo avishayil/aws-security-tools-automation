@@ -2,6 +2,7 @@
 
 ## Deployment instructions
 
+- Install python dependencies (currently tested on python 3): `pip install -r requirements.txt`
 - Copy the example configuration files on your workspace:
   - `cp enable.example.csv enable.csv`
   - `cp config.example.yml config.yml`
