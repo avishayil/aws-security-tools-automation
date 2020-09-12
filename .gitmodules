@@ -1,0 +1,9 @@
+[submodule "amazon-guardduty-multiaccount-scripts"]
+	path = amazon-guardduty-multiaccount-scripts
+	url = https://github.com/aws-samples/amazon-guardduty-multiaccount-scripts
+[submodule "aws-securityhub-multiaccount-scripts"]
+	path = aws-securityhub-multiaccount-scripts
+	url = https://github.com/awslabs/aws-securityhub-multiaccount-scripts.git
+[submodule "amazon-detective-multiaccount-scripts"]
+	path = amazon-detective-multiaccount-scripts
+	url = https://github.com/aws-samples/amazon-detective-multiaccount-scripts.git
