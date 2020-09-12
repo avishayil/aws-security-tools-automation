@@ -7,6 +7,7 @@
   - `cp enable.example.csv enable.csv`
   - `cp config.example.yml config.yml`
 - On each account, apply the trust cloudformations from each of the subfolders:
+  - `EnableConfig.yaml`
   - `EnableGuardDuty.yaml`
   - `EnableSecurityHub.yaml`
   - `EnableDetective.yaml`
