@@ -33,3 +33,19 @@ Resources:
               - Effect: Allow
                 Action: 'iam:PassRole'
                 Resource: !Sub 'arn:aws:iam::${AWS::AccountId}:role/AWSConfigRole'
+  ConfigRole:
+    Type: AWS::IAM::Role
+    Properties:
+      RoleName: AWSConfigRole
+      AssumeRolePolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - config.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSConfigRole
