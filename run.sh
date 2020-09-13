@@ -14,9 +14,9 @@ else
     echo "Running deployment of tools on master account $master_account and regions $regions_string"
     cd amazon-guardduty-multiaccount-scripts
     python enableguardduty.py --master_account $master_account --enabled_regions $regions_string --assume_role ManageGuardDuty ../enable.csv
-    cd .. && cd aws-securityhub-multiaccount-scripts 
-    python enablesecurityhub.py --master_account $master_account --enabled_regions $regions_string --assume_role ManageSecurityHub ../enable.csv
-    cd .. && cd amazon-detective-multiaccount-scripts
+    cd aws-securityhub-multiaccount-scripts 
+    python enablesecurityhub.py --master_account $master_account --enabled_regions $regions_string --assume_role ManageSecurityHub --enable_standards "arn:aws:securityhub:::ruleset/cis-aws-foundations-benchmark/v/1.2.0" ../enable.csv
+    cd amazon-detective-multiaccount-scripts
     python enabledetective.py --master_account $master_account --enabled_regions $regions_string --assume_role ManageDetective --input_file ../enable.csv
     cd ..
 fi
